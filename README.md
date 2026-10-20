@@ -55,6 +55,16 @@
 plugin_manager({ action: 'install_bundle', target: 'C:\\Users\\lishuo\\Documents\\DSH_Project\\插件开发\\dsh-usb' })
 ```
 
+从 GitHub 装：
+
+```powershell
+git clone https://github.com/lishuo4096/dsh-usb.git C:\path\to\dsh-usb
+```
+
+```js
+plugin_manager({ action: 'install_bundle', target: 'C:\\path\\to\\dsh-usb' })
+```
+
 `application: 'applied'` 之后用 `plugin_manager({action:'list_plugins'})` 看 `fiberPhase: 'active'`，再用 `cordis_inspect_query(Tool.listTools)` 确认 8 个 `usb_*` 工具在列。
 
 **改源码不热重载**：`set_plugin` 关掉再开一次。
