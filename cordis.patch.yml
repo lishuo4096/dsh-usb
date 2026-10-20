@@ -1,0 +1,14 @@
+# dsh-usb 的 Cordis bundle 补丁
+#
+# 装载方式（在 Harness 会话里）：
+#   plugin_manager({ action: "install_bundle", target: "C:\\Users\\lishuo\\Documents\\DSH_Project\\插件开发\\dsh-usb" })
+#
+# 这条 insert 会在 profile 的 `dsh.profile.bundles` 里追加本插件，
+# 并把包以 `link:` 形式写进 dependencies —— 所以改源码后需要
+# `plugin_manager({action:"set_plugin", target:"usb", enabled:false})` 再开一次才会重载。
+#
+# `id` 必须与 index.js 里的 `export const name` 逐字一致，否则插件纤维挂不上。
+
+- insert:
+    - id: usb
+      name: "@local/dsh-usb"

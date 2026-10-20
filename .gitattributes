@@ -1,0 +1,6 @@
+* text=auto
+vendor/UsbTreeView.exe binary
+*.md text eol=lf
+*.js text eol=lf
+*.json text eol=lf
+*.yml text eol=lf

@@ -1,0 +1,64 @@
+{
+  "name": "@local/dsh-usb",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "查询本机 USB 拓扑与描述符、判定设备类型、安全弹出或卸载 USB 设备",
+  "license": "MIT",
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./lib/*": "./lib/*"
+  },
+  "files": [
+    "index.js",
+    "lib",
+    "skills",
+    "vendor/UsbTreeView.exe",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE",
+    "THIRD-PARTY.md"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lishuo4096/dsh-usb.git"
+  },
+  "homepage": "https://github.com/lishuo4096/dsh-usb#readme",
+  "bugs": {
+    "url": "https://github.com/lishuo4096/dsh-usb/issues"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "keywords": [
+    "dsh-plugin",
+    "usb",
+    "usbtreeview",
+    "pnputil",
+    "windows",
+    "device-management"
+  ],
+  "meta": {
+    "title": "USB 设备管理",
+    "description": "枚举 USB 树与描述符、读设备类型，并安全弹出/卸载设备"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "compatibility": {
+      "dshReleases": {
+        "0.2.0-rc.2": "compatible"
+      }
+    }
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "^4.0.1"
+  },
+  "peerDependenciesMeta": {
+    "@deepseek-ai/cordis": {
+      "optional": true
+    }
+  }
+}
